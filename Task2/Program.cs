@@ -17,10 +17,12 @@ Console.WriteLine("Введите второе число:");
 int secondNumber = Convert.ToInt32(Console.ReadLine());
 if (firstNumber < 0 || secondNumber < 0)
 {
-    Console.WriteLine("Оба числа должны быть положительными");
+    Console.WriteLine("Оба числа должны быть неотрицательными");
 }
 else if (firstNumber < secondNumber)
 {
-    Console.WriteLine($"Cумма натуральных элементов: {SumNumbers(firstNumber, secondNumber)}");
+    Console.WriteLine
+    ($"Cумма натуральных элементов: {SumNumbers(firstNumber, secondNumber)}");
 }
-else Console.WriteLine($"Cумма натуральных элементов: {SumNumbers(secondNumber, firstNumber)}");
+else Console.WriteLine
+($"Cумма натуральных элементов: {SumNumbers(secondNumber, firstNumber)}");
