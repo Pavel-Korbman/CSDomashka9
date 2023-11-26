@@ -7,10 +7,10 @@
 
 int AckermanFunction(int m, int n)
 {
-    if (n == 0) return m + 1;
+    if (m == 0) return n + 1;
     else
     {
-        if (m != 0 && n == 0) return AckermanFunction(m - 1, 1);
+        if (n == 0) return AckermanFunction(m - 1, 1);
         else return AckermanFunction(m - 1, AckermanFunction(m, n - 1));
     }
 }
@@ -23,4 +23,4 @@ int secondNumber = Convert.ToInt32(Console.ReadLine());
 if (firstNumber < 0 || secondNumber < 0) Console.WriteLine
 ("Оба числа должны быть неотрицательными.");
 else Console.WriteLine
-($"А({firstNumber}, {secondNumber}) = {AckermanFunction(firstNumber, secondNumber)}");
+($"А({firstNumber},{secondNumber}) = {AckermanFunction(firstNumber, secondNumber)}");
